@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "name": "Fleur Jaune",
+            "price": 39.99,
+            "description": "Ceci est vraiment une belle fleur jaune, très rare, qui vient d'Australie"
+        },
+        {
+            "name": "Sac de terre",
+            "price": 14.99,
+            "description": "Beau sac de terre tous neuf, jamais ouvert, très bonne qualité"
+        },
+        {
+            "name": "Gant de jardinage",
+            "price": 7.99,
+            "description": "Gant de jardinage pour ne pas se salir les mains et les garder tous propres"
+        },
+        {
+            "name": "Chapeau de jardinier",
+            "price": 10.99,
+            "description": "Chapeau pour se protéger du soleil, très utile durant les journées chaudes d'été"
+        },
+        {
+            "name": "Fleur Jaune",
+            "price": 39.99,
+            "description": "Ceci est vraiment une belle fleur jaune, très rare, qui vient d'Australie"
+        },
+        {
+            "name": "Sac de terre",
+            "price": 14.99,
+            "description": "Beau sac de terre tous neuf, jamais ouvert, très bonne qualité"
+        },
+        {
+            "name": "Gant de jardinage",
+            "price": 7.99,
+            "description": "Gant de jardinage pour ne pas se salir les mains et les garder tous propres"
+        },
+        {
+            "name": "Chapeau de jardinier",
+            "price": 10.99,
+            "description": "Chapeau pour se protéger du soleil, très utile durant les journées chaudes d'été"
+        }
+    ]
+}
