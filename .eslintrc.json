@@ -19,6 +19,11 @@
     ],
     "rules": {
         "no-undef": "off",
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        // we use 2 spaces to indent our code
+        "indent": ["error", 2],
+        // we want to avoid useless spaces
+        "no-multi-spaces": ["error"]
     }
 }
