@@ -1,34 +1,30 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 import './Homepage.css';
 export default function Homepage(){
   return (
-    <div>
-      <section style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/banner.jpg'})`,
-        backgroundRepeat: 'no-repeat',
-        height: '92vh',
-        backgroundSize: '100% 100%',
-        WebkitTransition: 'background-image 5s',
-        display: 'flex',
-        justifyContent: 'center',
-        alignContent: 'center'}}>
-        <div className='cover_quote'>The love of gardening is a seed once sown that never dies</div>
+    <>
+      <Navbar/>
+      <section className='cover center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover.jpg'})`}}>
+        <div className='cover_quote'>Leading an ergonomically correct life is not expensive anymore</div>
       </section>
-      <section>
+      <section className='center'>
         <div className='row_1_left_side'>
-          It is for everyone, come join us! 
+          <p className='center' style={{marginBottom:'10px'}}>Need new furnitures ? Check it out !</p>
+          <div className='center'>
+            <button className='shop_btn'><Link to='/products' style= {{textDecoration:'none', color:'white'}}>Shop Now</Link></button> 
+          </div>
         </div>
         <div className='row_1_right_side'>
-          <img className='right_side_row_img' src={process.env.PUBLIC_URL + '/kid.jpeg'} loading="lazy" alt="" style={{margin: '25px'}}/>
+          <img className='right_side_row_img' src={process.env.PUBLIC_URL + '/luxury_office.jpg'} loading="lazy" alt=""/>
         </div>
       </section>
       <section>
-        <div className='row_2_left_side'>
-          <img className='right_side_row_img' src={process.env.PUBLIC_URL + '/plant.jpg'} loading="lazy" alt="" style={{margin: '25px'}}/>
-        </div>
-        <div className='row_2_right_side'>
-          What a lovely plant, you like it ? 
+        <div>
+          <img className='bottom_img' src={process.env.PUBLIC_URL + '/bottom_picture.jpg'} loading="lazy" alt=""/>
         </div>
       </section>
-    </div>
+    </>
   );
 }

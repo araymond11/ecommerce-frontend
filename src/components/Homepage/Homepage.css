@@ -1,29 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 .color{
-    color: #fff9f1;
-    color: #bacbd2;
-    color: #596a71;
-    color: #eadd46;
-    color: #485123;
+    color: #111840;
+    color: #2e4158;
+    color: #1e3040;
+    color: #a69258;
+    color: #0d0d0d;
 }
 
 .row_1_left_side{
-    height: 400px;
     width: 50%;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font: 1.8rem montserrat;
+    font: 1.8rem Meta, sans-serif;
 }
 
 .row_1_right_side{
-    height: 100%;
+    height: auto;
     width: 50%;
     float: left;
     display: flex;
     justify-content: center;
-    background-color: #bacbd2;
 }
 
 .row_2_left_side{
@@ -45,23 +43,70 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    font: 1.8rem montserrat;
+    font: 1.8rem Futura;
     background-color: #ebeeed;
     background-image: linear-gradient(#ebeeed, #dfdfdf);
 }
 
+.bottom_img{
+    width: 100%;
+    height: auto;
+    max-height: 900px;
+    text-decoration: none;
+}
+
+.right_side_row_img{
+    height: 100%;
+    width: 100%;
+}
+
+.cover{
+    background: no-repeat;
+    height: 92vh;
+    background-size: 100% auto;
+    animation: ani 3s ease;
+}
+
 .cover_quote{
+    font: 2.5rem Futura;
+    text-transform: uppercase;
+    max-width: 700px;
+    height: 50%;
+    animation: leftToRight 2.5s ease;
+    color: white;
+}
+
+.center{
     display: flex;
-    font: 4rem montserrat;
-    animation: ani 5s ease-out 2s forwards;
-    opacity: 0;
-    margin-top: 150px;
-    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop_btn{
+    background-color: #252525;
+    border: 4px solid #252525;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 28px;
+    height: 45px;
+    font-size: 1rem;
+    
 }
 
 @keyframes ani {
-    100%{
+    from{
+        opacity: 0;
+    }
+    to{
         opacity: 1;
-        color: #779112;
+    }
+}
+
+@keyframes leftToRight {
+    from{
+        margin-right: 2500px;
+    }
+    to{
+        margin-right: 0px;
     }
 }
