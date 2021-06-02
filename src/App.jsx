@@ -1,8 +1,8 @@
 import React from 'react';
-import Products from './components/Products/Products';
-import './App.css';
+import Products from './pages/Products/Products';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Homepage from './components/Homepage/Homepage';
+import Homepage from './pages/Homepage/Homepage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Products/>
         </Route>
       </Switch>
+      <Footer/>
     </Router>
   );
 }
