@@ -13,14 +13,14 @@ export default function Navbar() {
         <ul className='navbar_menu'>
           <li className='navbar_item'>
             <Link to='/products' className='navbar_item'>
-                    Products
+                    PRODUCTS
             </Link>
           </li>
           <li className='navbar_item'>
-                    Contacts
+                    CONTACTS
           </li>
           <li className='navbar_item'> 
-                    About
+                    ABOUT
           </li>
         </ul>
       </nav>
