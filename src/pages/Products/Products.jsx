@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Navbar from '../../components/Navbar/Navbar';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -23,36 +24,40 @@ function Products() {
   const products = data.products;
 
   return(
-    <div className='products_container'>
-      {products.map((x, i)=> {
-        return(
-          <div className='product_item' key={i}>
-            <Card className={classes.root}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  title="Contemplative Reptile"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {x.name}
-                  </Typography>
+    <>
+      <Navbar/>
+      <h1 className='product_header'>Products</h1>
+      <div className='products_container'>
+        {products.map((x, i)=> {
+          return(
+            <div className='product_item' key={i}>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image="/static/images/cards/contemplative-reptile.jpg"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {x.name}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      {x.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    {x.description}
+                    {x.price}
                   </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {x.price}
-                </Typography>
-              </CardActions>
-            </Card>
-          </div>
-        );
-      })}
-    </div>
+                </CardActions>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 

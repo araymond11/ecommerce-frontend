@@ -8,8 +8,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-top: 1px solid gray;
+    padding-top: 25px;
 }
 
 .product_item{
     padding: 20px;
+}
+
+.product_header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }

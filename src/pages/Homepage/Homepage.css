@@ -91,7 +91,43 @@
     padding: 0 28px;
     height: 45px;
     font-size: 1rem;
-    
+}
+
+.homepage_navbar{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    top: 0;
+    z-index: 999;
+    position: absolute;
+}
+.homepage_navbar_logo{
+    color: black;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.homepage_navbar_menu{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 15px;
+    list-style: none;
+    text-align: center;
+}
+.homepage_navbar_item{
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
 }
 
 @keyframes ani {

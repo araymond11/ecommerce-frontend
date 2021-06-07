@@ -1,11 +1,24 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 export default function Homepage(){
   return (
     <>
-      <Navbar/>
+      <nav className='homepage_navbar'>
+        <ul className='homepage_navbar_menu'>
+          <li className='homepage_navbar_item'>
+            <Link to='/products' className='homepage_navbar_item'>
+                    PRODUCTS
+            </Link>
+          </li>
+          <li className='homepage_navbar_item'>
+                    CONTACTS
+          </li>
+          <li className='homepage_navbar_item'> 
+                    ABOUT
+          </li>
+        </ul>
+      </nav>
       <section className='cover center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover.jpg'})`}}>
         <div className='cover_quote'>Leading an ergonomically correct life is not expensive anymore</div>
       </section>
