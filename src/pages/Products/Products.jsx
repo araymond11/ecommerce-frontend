@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from '../../components/Navbar/Navbar';
 import Card from '@material-ui/core/Card';
@@ -15,47 +15,62 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 325,
   },
 });
 
 function Products() {
   const classes = useStyles();
   const products = data.products;
+  const [filter, setFilter] = useState('All');
+
+  const filterProduct = async (e) => {
+    setFilter(e);
+    console.log(filter);
+  };
 
   return(
     <>
       <Navbar/>
       <h1 className='product_header'>Products</h1>
       <div className='products_container'>
-        {products.map((x, i)=> {
-          return(
-            <div className='product_item' key={i}>
-              <Card className={classes.root}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="Contemplative Reptile"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {x.name}
-                    </Typography>
+        <label>
+          <strong>Filter:</strong>
+          <select onChange={(event) => filterProduct(event.target.value)}>
+            <option value="All">All</option>
+            <option value="Chair">Chair</option>
+            <option value="Lamp">Lamp</option>
+          </select>
+        </label>
+        {products.filter(product => filter === 'All' || product.category === filter)
+          .map((x, i)=> {
+            return(
+              <div className='product_item' key={i}>
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image={x.image}
+                      title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {x.name}
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                        {x.description}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      {x.description}
+                      {x.price} CAD
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {x.price}
-                  </Typography>
-                </CardActions>
-              </Card>
-            </div>
-          );
-        })}
+                  </CardActions>
+                </Card>
+              </div>
+            );
+          })}
       </div>
     </>
   );
