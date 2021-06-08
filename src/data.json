@@ -1,44 +1,52 @@
 {
     "products": [
         {
-            "name": "Fleur Jaune",
-            "price": 39.99,
-            "description": "Ceci est vraiment une belle fleur jaune, très rare, qui vient d'Australie"
+            "name": "Aeron Chair",
+            "price": 1294.95,
+            "description": "While its iconic form has remained largely unchanged, the Aeron Chair has been remastered up to meet the needs of today’s work",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/aeron_chairs/th_prd_aeron_chairs_office_chairs_hv.jpg.rendition.768.768.jpg"
         },
         {
-            "name": "Sac de terre",
-            "price": 14.99,
-            "description": "Beau sac de terre tous neuf, jamais ouvert, très bonne qualité"
+            "name": "Embody Chair",
+            "price": 1619.95,
+            "description": "Embody began with the recognition of a previously unsolved problem: the lack of physical harmony between people and their technology",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/embody_chairs/ig_prd_ovw_embody_chairs_10.jpg.rendition.480.480.jpg"
         },
         {
-            "name": "Gant de jardinage",
-            "price": 7.99,
-            "description": "Gant de jardinage pour ne pas se salir les mains et les garder tous propres"
+            "name": "Mirra 2 Chair",
+            "price": 1056.95,
+            "description": "We become more active, shifting from individual to collaborative work in an instant, we need tools designed to be as agile as our work style",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/mirra_2_chairs/th_prd_mirra_2_chairs_office_chairs_hv.jpg.rendition.768.768.jpg"
         },
         {
-            "name": "Chapeau de jardinier",
-            "price": 10.99,
-            "description": "Chapeau pour se protéger du soleil, très utile durant les journées chaudes d'été"
+            "name": "Cosm Chair",
+            "price": 1729.95,
+            "description": "Its sophisticated ergonomic design instantly responds to your body, movement, and posture to provide natural balance and total support",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/cosm_chairs/th_prd_ovw_cosm_chairs_hv.jpg.rendition.768.768.jpg"
         },
         {
-            "name": "Fleur Jaune",
-            "price": 39.99,
-            "description": "Ceci est vraiment une belle fleur jaune, très rare, qui vient d'Australie"
+            "name": "Ode Lamps",
+            "price": 445.95,
+            "description": "With a touch of its slim stem, this modern desk lamp emits a pool of diffused light from below an elegant spun-steel shade",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/ode_lamps/th_prd_ode_lamps_lighting_hv.jpg.rendition.1152.1152.jpg"
         },
         {
-            "name": "Sac de terre",
-            "price": 14.99,
-            "description": "Beau sac de terre tous neuf, jamais ouvert, très bonne qualité"
+            "name": "Lolly Personal Light",
+            "price": 275.95,
+            "description": "Lolly Personal Light is an elegant source of long-lasting LED light that takes up just enough space on a desk to power people’s productivity",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/lolly_personal_light/th_prd_lolly_personal_light_lighting_fn.jpg.rendition.600.600.jpg"
         },
         {
-            "name": "Gant de jardinage",
-            "price": 7.99,
-            "description": "Gant de jardinage pour ne pas se salir les mains et les garder tous propres"
+            "name": "Flute Personal Light",
+            "price": 295.95,
+            "description": "With its LED technology, 85% recyclability and 24-year life span and leaves a minuscule carbon foot print on the earth",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/flute_personal_light/th_prd_flute_personal_light_lighting_fn.jpg.rendition.600.600.jpg"
         },
         {
-            "name": "Chapeau de jardinier",
-            "price": 10.99,
-            "description": "Chapeau pour se protéger du soleil, très utile durant les journées chaudes d'été"
+            "name": "Tone Personal Light",
+            "price": 345.95,
+            "description": "Tone adjusts and dims to put the perfect amount of light right where you want. It draws just over six watts and shuts off automatically",
+            "image": "https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/tone_personal_light/th_prd_tone_personal_light_lighting_fn.jpg.rendition.600.600.jpg"
         }
     ]
 }

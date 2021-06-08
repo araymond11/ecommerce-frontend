@@ -9,7 +9,7 @@ export default function Navbar() {
       <nav className='navbar'>
         <ul className='navbar_menu'>
           <li className='navbar_routes'>
-            <Link to='/products' className='navbar_item'>
+            <Link to='/' className='navbar_item'>
                     HOME
             </Link>
           </li>
