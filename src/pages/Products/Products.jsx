@@ -34,14 +34,16 @@ function Products() {
       <Navbar/>
       <h1 className='product_header'>Products</h1>
       <div className='products_container'>
-        <label>
-          <strong>Filter:</strong>
-          <select onChange={(event) => filterProduct(event.target.value)}>
-            <option value="All">All</option>
-            <option value="Chair">Chair</option>
-            <option value="Lamp">Lamp</option>
-          </select>
-        </label>
+        <span style={{width:'100%'}}>   
+          <div className='filter_container'>
+            <strong>Filter:</strong>
+            <select onChange={(event) => filterProduct(event.target.value)}>
+              <option value="All">All</option>
+              <option value="Chair">Chair</option>
+              <option value="Lamp">Lamp</option>
+            </select>
+          </div>    
+        </span>
         {products.filter(product => filter === 'All' || product.category === filter)
           .map((x, i)=> {
             return(
@@ -51,7 +53,7 @@ function Products() {
                     <CardMedia
                       className={classes.media}
                       image={x.image}
-                      title="Contemplative Reptile"
+                      title="Product"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
