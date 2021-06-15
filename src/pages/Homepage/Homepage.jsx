@@ -12,7 +12,9 @@ export default function Homepage(){
             </Link>
           </li>
           <li className='homepage_navbar_item'>
-                    CONTACTS
+            <Link to='/contact' className='homepage_navbar_item'>
+                    CONTACT
+            </Link>
           </li>
           <li className='homepage_navbar_item'> 
                     ABOUT
@@ -26,7 +28,7 @@ export default function Homepage(){
         <div className='row_1_left_side'>
           <p className='center' style={{marginBottom:'10px'}}>Need new furnitures ? Check it out !</p>
           <div className='center'>
-            <button className='shop_btn'><Link to='/products' style= {{textDecoration:'none', color:'white'}}>Shop Now</Link></button> 
+            <Link to='/products' style= {{textDecoration:'none', color:'white'}}><button className='shop_btn'>Shop Now</button></Link>
           </div>
         </div>
         <div className='row_1_right_side'>

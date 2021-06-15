@@ -19,7 +19,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className='navbar_item'>
-                    CONTACTS
+            <Link to='/contact' className='navbar_item'>
+                    CONTACT
+            </Link>
           </li>
           <li className='navbar_item'> 
                     ABOUT
