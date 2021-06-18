@@ -24,7 +24,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className='navbar_item'> 
+            <Link to='/about' className='navbar_item'>
                     ABOUT
+            </Link>
           </li>
         </ul>
       </nav>

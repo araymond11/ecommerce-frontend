@@ -3,6 +3,7 @@ import Products from './pages/Products/Products';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Homepage from './pages/Homepage/Homepage';
 import Contact from './pages/Contact/Contact';
+import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path='/contact'>
           <Contact/>
+        </Route>
+        <Route path='/about'>
+          <About/>
         </Route>
       </Switch>
       <Footer/>
