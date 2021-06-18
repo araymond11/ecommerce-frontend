@@ -5,8 +5,8 @@ export default function Contact() {
   return(
     <>
       <h1 className='product_header'>Contact</h1>
-      <div style= {{borderTop: '1px solid gray'}}>
-        <img src={process.env.PUBLIC_URL + '/contact.png'} alt="" style= {{height:'50%', width:'50%'}} />
+      <div className='contact_container'>
+        <img src={process.env.PUBLIC_URL + '/contact.png'} alt="" className='contact_img_container'/>
         <div className='contact_right_side'>
           <span style= {{fontSize:'2rem'}}>Encountered a problem ?</span>
           <span style= {{fontSize:'1.5rem'}}>Our support team is ready to help</span>

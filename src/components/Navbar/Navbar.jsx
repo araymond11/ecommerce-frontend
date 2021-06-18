@@ -8,7 +8,7 @@ export default function Navbar() {
     <div>
       <nav className='navbar'>
         <ul className='navbar_menu'>
-          <li className='navbar_routes'>
+          <li className='navbar_item'>
             <Link to='/' className='navbar_item'>
                     HOME
             </Link>

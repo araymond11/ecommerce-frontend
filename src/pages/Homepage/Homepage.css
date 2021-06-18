@@ -120,3 +120,25 @@
         margin-right: 0px;
     }
 }
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .cover{
+        height: 40vh;
+    }
+    .cover_quote{
+        font: 1.4rem Futura;
+    }
+    .center{
+        flex-direction: column-reverse;
+    }
+    .row_1_right_side{
+        width: auto;
+    }
+    .row_1_left_side{
+        width: 80%;
+        font: 1.5rem Meta, sans-serif;
+        text-align: center;
+        margin-bottom: 10px
+    }
+}

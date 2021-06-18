@@ -56,3 +56,17 @@
 .website-rights{
   color: white;
 }
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .footer-container{
+    padding: 1rem 0 1rem 0;
+  }
+  .upper-section{
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .bottom-section{
+    padding-top: 1rem;
+  }
+}

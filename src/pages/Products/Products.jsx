@@ -25,7 +25,6 @@ function Products() {
 
   const filterProduct = async (e) => {
     setFilter(e);
-    console.log(filter);
   };
 
   return(
