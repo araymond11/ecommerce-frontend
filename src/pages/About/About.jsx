@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import './About.css';
 
 export default function About() {
   return(
     <>
-      <Navbar/>
       <h1 className='product_header'>About Us</h1>
       <div style= {{borderTop: '1px solid gray'}}>
         <div className='about_container'>

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from '../../components/Navbar/Navbar';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -31,7 +30,6 @@ function Products() {
 
   return(
     <>
-      <Navbar/>
       <h1 className='product_header'>Products</h1>
       <div className='products_container'>
         <span style={{width:'100%'}}>   

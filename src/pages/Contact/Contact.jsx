@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import './Contact.css';
 
 export default function Contact() {
   return(
     <>
-      <Navbar/>
       <h1 className='product_header'>Contact</h1>
       <div style= {{borderTop: '1px solid gray'}}>
         <img src={process.env.PUBLIC_URL + '/contact.png'} alt="" style= {{height:'50%', width:'50%'}} />
