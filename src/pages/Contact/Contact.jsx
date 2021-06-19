@@ -4,7 +4,6 @@ import './Contact.css';
 export default function Contact() {
   return(
     <>
-      <h1 className='product_header'>Contact</h1>
       <div className='contact_container'>
         <img src={process.env.PUBLIC_URL + '/contact.png'} alt="" className='contact_img_container'/>
         <div className='contact_right_side'>

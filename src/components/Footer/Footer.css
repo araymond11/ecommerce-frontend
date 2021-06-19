@@ -70,3 +70,15 @@
     padding-top: 1rem;
   }
 }
+
+@media screen and (max-width: 1360px) {
+  .footer-container{
+    display: block;
+  }
+  .upper-section{
+    max-width: none;
+  }
+  .bottom-section{
+    max-width: none;
+  }
+}

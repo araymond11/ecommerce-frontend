@@ -29,7 +29,6 @@ function Products() {
 
   return(
     <>
-      <h1 className='product_header'>Products</h1>
       <div className='products_container'>
         <span style={{width:'100%'}}>   
           <div className='filter_container'>

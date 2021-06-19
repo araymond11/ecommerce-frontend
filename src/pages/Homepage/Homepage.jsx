@@ -4,8 +4,8 @@ import './Homepage.css';
 export default function Homepage(){
   return (
     <>
-      <h1 className='product_header'>Home</h1>
-      <section className='cover center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover.jpg'})`}}>
+      {/* <h1 className='product_header'>Home</h1> */}
+      <section className='cover center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover_media.png'})`}}>
         <div className='cover_quote'>Leading an ergonomically correct life is not expensive anymore</div>
       </section>
       <section className='center'>
