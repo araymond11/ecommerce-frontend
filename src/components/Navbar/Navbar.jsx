@@ -1,40 +1,45 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css';
 
 
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+  
   return (
-    <div style={{display: 'flex', borderBottom:'1px solid gray'}}>
-      <img className='navbar_logo' src={process.env.PUBLIC_URL + '/logo.png'} alt="" />
+    <div style={{borderBottom:'1px solid gray'}}>
       <nav className='navbar'>
-        <ul className='navbar_menu'>
-          <li className='navbar_item'>
-            <Link to='/' className='navbar_item'>
-                    HOME
+        <img className='navbar_logo' src={process.env.PUBLIC_URL + '/logo.png'} alt="" />
+        <div className='menu_icon' onClick={handleClick}>
+          <MenuIcon/>
+        </div>
+        <ul className={click ? 'nav_menu active' : 'nav_menu'}>
+          <li className='nav_item'>
+            <Link to='/' className='nav_links' onClick={closeMobileMenu}>
+                    Home
             </Link>
           </li>
-          <li className='navbar_item'>
-            <Link to='/products' className='navbar_item'>
-                    PRODUCTS
+          <li className='nav_item'>
+            <Link to='/products' className='nav_links' onClick={closeMobileMenu}>
+                    Products
             </Link>
           </li>
-          <li className='navbar_item'>
-            <Link to='/contact' className='navbar_item'>
-                    CONTACT
+          <li className='nav_item'>
+            <Link to='/contact' className='nav_links' onClick={closeMobileMenu}>
+                    Contact Us
             </Link>
           </li>
-          <li className='navbar_item'> 
-            <Link to='/about' className='navbar_item'>
-                    ABOUT
+          <li className='nav_item'>
+            <Link to='/about' className='nav_links' onClick={closeMobileMenu}>
+                    About
             </Link>
           </li>
         </ul>
       </nav>
-      <div className='burger'>
-        <Link style={{fontSize:'xxx-large', color:'black'}} to='/'><MenuIcon fontSize="inherit"/></Link>
-      </div>
     </div>
   );
 }
