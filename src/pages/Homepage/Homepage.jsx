@@ -4,15 +4,16 @@ import './Homepage.css';
 export default function Homepage(){
   return (
     <>
-      {/* <h1 className='product_header'>Home</h1> */}
       <section className='cover center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover_media.png'})`}}>
         <div className='cover_quote'>Leading an ergonomically correct life is not expensive anymore</div>
       </section>
       <section className='center'>
         <div className='row_1_left_side'>
-          <p className='center' style={{marginBottom:'10px'}}>Need new furnitures ? Check it out !</p>
+          <p className='center bottom_spacer'>Need new furnitures ? Check it out !</p>
           <div className='center'>
-            <Link to='/products' style= {{textDecoration:'none', color:'white'}}><button className='shop_btn'>Shop Now</button></Link>
+            <Link to='/products' className='shop_link'>
+              <button className='shop_btn'>Shop Now</button>
+            </Link>
           </div>
         </div>
         <div className='row_1_right_side'>

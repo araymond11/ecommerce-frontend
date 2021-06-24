@@ -3,14 +3,6 @@
     padding:0;
 }
 
-.color{
-    color: #111840;
-    color: #2e4158;
-    color: #1e3040;
-    color: #a69258;
-    color: #0d0d0d;
-}
-
 .row_1_left_side{
     width: 50%;
     font: 1.8rem Meta, sans-serif;
@@ -92,6 +84,15 @@
     height: 2.875rem;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.shop_link{
+    text-decoration: none;
+    color: white;
+}
+
+.bottom_spacer{
+    margin-bottom: 0.625rem;
 }
 
 .homepage_navbar_logo{

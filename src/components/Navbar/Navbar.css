@@ -1,3 +1,7 @@
+.navbar_container{
+  border-bottom: 1px solid gray;
+}
+
 .navbar {
   color: black;
   display: flex;

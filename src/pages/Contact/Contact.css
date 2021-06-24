@@ -8,6 +8,14 @@
     height: 25rem;
 }
 
+.contact_header_text{
+    font-size: 2rem;
+}
+
+.contact_text{
+    font-size: 1.5rem;
+}
+
 .contact_img_container{
     height: 50%;
     width: 50%;

@@ -30,7 +30,7 @@ function Products() {
   return(
     <>
       <div className='products_container'>
-        <span style={{width:'100%'}}>   
+        <span className='filter_row'>   
           <div className='filter_container'>
             <strong>Filter:</strong>
             <select onChange={(event) => filterProduct(event.target.value)}>

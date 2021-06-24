@@ -11,7 +11,7 @@ export default function Navbar() {
   const closeMobileMenu = () => setClick(false);
   
   return (
-    <div style={{borderBottom:'1px solid gray'}}>
+    <div className='navbar_container'>
       <nav className='navbar'>
         <img className='navbar_logo' src={process.env.PUBLIC_URL + '/logo.png'} alt="" />
         <div className='menu_icon' onClick={handleClick}>
