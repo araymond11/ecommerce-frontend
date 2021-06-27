@@ -6,8 +6,10 @@ import Homepage from './pages/Homepage/Homepage';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
+import data from './data.json';
 
 function App() {
+
   return (
     <Router>
       <Navbar/>
@@ -16,7 +18,7 @@ function App() {
       </Route>
       <Switch>
         <Route path='/products'>
-          <Products/>
+          <Products products={data.products}/>
         </Route>
         <Route path='/contact'>
           <Contact/>

@@ -6,7 +6,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import data from '../../data.json';
 import './Products.css';
 
 const useStyles = makeStyles({
@@ -18,14 +17,17 @@ const useStyles = makeStyles({
   },
 });
 
-function Products() {
+
+function Products(props) {
   const classes = useStyles();
-  const products = data.products;
   const [filter, setFilter] = useState('All');
+  const { products } = props;
+  const productFilteredByCategory = products.filter(products => filter === 'All' || products.category === filter);
 
   const filterProduct = async (e) => {
-    setFilter(e);
+    setFilter(await e);
   };
+
 
   return(
     <>
@@ -40,7 +42,7 @@ function Products() {
             </select>
           </div>    
         </span>
-        {products.filter(product => filter === 'All' || product.category === filter)
+        {productFilteredByCategory
           .map((x, i)=> {
             return(
               <div className='product_item' key={i}>
