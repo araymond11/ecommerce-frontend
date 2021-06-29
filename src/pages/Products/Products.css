@@ -15,6 +15,11 @@
     padding: 1.25rem;
 }
 
+.product_detail_link{
+    text-decoration: none;
+    color: black;
+}
+
 .filter_container{
     float: right;
     padding: 0.25rem;
@@ -23,3 +28,4 @@
 .filter_row{
     width: 100%;
 }
+

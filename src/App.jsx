@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage/Homepage';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
 import data from './data.json';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path='/about'>
           <About/>
+        </Route>
+        <Route path='/productDetail/:id'>
+          <ProductDetail/>
         </Route>
       </Switch>
       <Footer/>

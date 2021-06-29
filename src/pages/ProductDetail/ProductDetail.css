@@ -1,0 +1,16 @@
+.productDetail__container{
+    display: flex;
+}
+
+.productDetail__container--left{
+    width: 50%;
+    padding: 10rem;
+}
+
+.productDetail__img{
+    width: 100%;
+}
+
+.productDetail__container--right{
+    width: 50%;
+}
