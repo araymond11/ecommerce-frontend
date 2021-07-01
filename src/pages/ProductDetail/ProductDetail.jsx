@@ -27,11 +27,15 @@ export default function ProductDetail(){
             {product.name}
           </h1>
           <div>
+            {product.price}$
+          </div>
+          <div className='productDetail__description'>
             {product.description}
-          </div>
-          <div>
-            {product.price}
-          </div>
+          </div>     
+          <span>
+            <input type="number" name="quantity" defaultValue="1" min="1" className='productDetail__quantity' />
+            <button className='shop_btn'>Add to cart</button>
+          </span>
         </div>
       </div>
     </>
