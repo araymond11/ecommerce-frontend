@@ -7,6 +7,7 @@ import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
+import Cart from './pages/Cart/Cart';
 import data from './data.json';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/productDetail/:id'>
           <ProductDetail/>
+        </Route>
+        <Route path='/cart'>
+          <Cart/>
         </Route>
       </Switch>
       <Footer/>

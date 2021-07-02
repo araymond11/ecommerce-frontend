@@ -1,0 +1,21 @@
+table {
+    margin: 1rem 0;
+    width: 100%;
+    border-color: grey;
+    border-spacing: 0;
+}
+
+table th, table td{
+    border-bottom: 1px solid #aaaeb0;
+}
+
+td{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.page__width{
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: left;
+}

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import './Navbar.css';
 
 
@@ -36,6 +37,11 @@ export default function Navbar() {
           <li className='nav_item'>
             <Link to='/about' className='nav_links' onClick={closeMobileMenu}>
                     About
+            </Link>
+          </li>
+          <li className='nav_item'>
+            <Link to='/cart' className='nav_links' onClick={closeMobileMenu}>
+              <ShoppingCartIcon/>
             </Link>
           </li>
         </ul>
