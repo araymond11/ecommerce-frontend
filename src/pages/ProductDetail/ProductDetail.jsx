@@ -5,7 +5,6 @@ import './ProductDetail.css';
 
 export default function ProductDetail(){
 
-  //   const [product, setProduct] = useState([]);
   const getProductById = (id) => {
     const product = products.find(x => x.id == id);
     return product;
@@ -23,13 +22,13 @@ export default function ProductDetail(){
           <img src={product.image} alt="" className='productDetail__img'/>
         </div>
         <div className='productDetail__container--right'>
-          <h1>
+          <h1 className='bottomSpacer__1rem'>
             {product.name}
           </h1>
-          <div>
+          <div className='bottomSpacer__1rem'>
             {product.price}$
           </div>
-          <div className='productDetail__description'>
+          <div className='productDetail__description bottomSpacer__1rem'>
             {product.description}
           </div>     
           <span>
