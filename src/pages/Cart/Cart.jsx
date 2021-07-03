@@ -15,19 +15,21 @@ export default function Cart() {
         </thead>
         <tbody>
           <tr>
-            <td>Image</td>
+            <td>
+              <img className='cart__img' src="https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/embody_chairs/ig_prd_ovw_embody_chairs_10.jpg.rendition.480.480.jpg" alt="" />
+            </td>
             <td>1200$</td>
             <td>1</td>
             <td>1200$</td>
           </tr>
-          <tr>
-            <td>Another Image</td>
-            <td>1200$</td>
-            <td>2</td>
-            <td>2400$</td>
-          </tr>
         </tbody>
       </table>
+      <div className='payment__container'>
+        <div className='subtotal'>Subtotal : 3600$</div>
+        <span>
+          <button className='checkout__btn'>Check out</button>
+        </span>
+      </div>
     </div>
   );
 }
