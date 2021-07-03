@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { store } from '../../store';
 import './Cart.css';
 
 export default function Cart() {
+
+  const globalState = useContext(store);
+  console.log(globalState);
+
   return(
     <div className='page__width'>
       <table>

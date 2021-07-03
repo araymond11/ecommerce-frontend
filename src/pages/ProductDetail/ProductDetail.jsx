@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../data.json';
+import { store } from '../../store';
 import './ProductDetail.css';
 
 export default function ProductDetail(){
+
+  const globalState = useContext(store);
+  const { dispatch } = globalState;
 
   const getProductById = (id) => {
     const product = products.find(x => x.id == id);
@@ -13,6 +17,10 @@ export default function ProductDetail(){
   const products = data.products;
   const { id } = useParams();
   const product = getProductById(id);
+
+  const addToCart = (product) => {
+    dispatch({ type: 'add product', product });
+  };
 
 
   return(
@@ -33,7 +41,7 @@ export default function ProductDetail(){
           </div>     
           <span>
             <input type="number" name="quantity" defaultValue="1" min="1" className='productDetail__quantity' />
-            <button className='shop_btn'>Add to cart</button>
+            <button className='shop_btn' onClick={addToCart}>Add to cart</button>
           </span>
         </div>
       </div>
