@@ -68,3 +68,33 @@ td{
     cursor: pointer;
     padding-left: 1rem;
 }
+
+
+@media only screen and (max-width: 46.85rem){
+    td:before {
+        content: attr(data-label);
+        float: left;
+        padding-right: 10px;
+        text-align: center;
+    }
+    table{
+        display: flex;
+        flex-direction: column;
+    }
+    thead{
+        display: none;
+    }
+    tr{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    td{
+        text-align: right;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    table th, table td{
+        border-bottom: none;
+    }
+}

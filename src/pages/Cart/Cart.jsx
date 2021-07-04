@@ -20,7 +20,7 @@ export default function Cart() {
           <tr>
             <th>Product</th>
             <th>Price</th>
-            <th>Quantity</th>
+            <th>Qty</th>
             <th>Total</th>
           </tr>
         </thead>
@@ -32,9 +32,9 @@ export default function Cart() {
                   <img className='cart__img' src={x.image} alt="" />
                   <button className='table__removeBtn' onClick={() => removeFromCart(index)}>Remove</button>
                 </td>
-                <td>{x.price}</td>
-                <td>1</td>
-                <td>{x.price}</td>
+                <td data-label='Price'>{x.price}</td>
+                <td data-label='Quantity' className='alignCenter'>1</td>
+                <td data-label='Price'>{x.price}</td>
               </tr>
             );
           })}
