@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { store } from '../../store';
+import React from 'react';
+import { useCart } from '../../store';
 import './Cart.css';
 
 export default function Cart() {
 
-  const globalState = useContext(store);
-  console.log(globalState);
+  const products = useCart();
+  const totalPrice = products.reduce((total, item) => total + item.price, 0);
 
   return(
     <div className='page__width'>
@@ -19,18 +19,22 @@ export default function Cart() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <img className='cart__img' src="https://www.hermanmiller.com/content/dam/hmicom/page_assets/products/embody_chairs/ig_prd_ovw_embody_chairs_10.jpg.rendition.480.480.jpg" alt="" />
-            </td>
-            <td>1200$</td>
-            <td>1</td>
-            <td>1200$</td>
-          </tr>
+          {products.map(x =>{
+            return(
+              <tr key={x.id}>
+                <td>
+                  <img className='cart__img' src={x.image} alt="" />
+                </td>
+                <td>{x.price}</td>
+                <td>1</td>
+                <td>1200$</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
       <div className='payment__container'>
-        <div className='subtotal'>Subtotal : 3600$</div>
+        <div className='subtotal'>Subtotal : {totalPrice.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</div>
         <span>
           <button className='checkout__btn'>Check out</button>
         </span>

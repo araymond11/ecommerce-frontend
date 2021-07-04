@@ -1,20 +1,28 @@
-import React, {createContext, useReducer} from 'react';
+import React, {useContext, createContext, useReducer} from 'react';
 
-const initialState = [];
-const store = createContext(initialState);
-const { Provider } = store;
+const StateContext = createContext();
+const DispatchContext = createContext();
 
-const StateProvider = ( { children } ) => {
-  const [state, dispatch] = useReducer((state, action) => {
-    switch(action.type) {
-    case 'add product':
-      return {...state, product: action.value};
-    default:
-      throw new Error();
-    }
-  }, initialState);
-
-  return <Provider value={{ state, dispatch }}>{children}</Provider>;
+const reducer = (state,action) => {
+  switch(action.type) {
+  case 'add product':
+    return [...state, action.product];
+  default:
+    throw new Error();
+  }
 };
 
-export { store, StateProvider };
+export const StateProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, []);
+
+  return(
+    <DispatchContext.Provider value={dispatch}>
+      <StateContext.Provider value={state}>
+        {children}
+      </StateContext.Provider>
+    </DispatchContext.Provider>
+  );
+};
+
+export const useCart = () => useContext(StateContext);
+export const useDispatch = () => useContext(DispatchContext);
