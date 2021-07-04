@@ -7,8 +7,13 @@ const reducer = (state,action) => {
   switch(action.type) {
   case 'add product':
     return [...state, action.product];
+  case 'remove product': {
+    const arr = [...state];
+    arr.splice(action.index, 1);
+    return arr;
+  }
   default:
-    throw new Error();
+    throw new Error(`unknown action ${action.type}`);
   }
 };
 
