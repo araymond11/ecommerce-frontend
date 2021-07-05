@@ -34,7 +34,7 @@ export default function Cart() {
                 </td>
                 <td data-label='Price'>{x.price}</td>
                 <td data-label='Quantity' className='alignCenter'>1</td>
-                <td data-label='Price'>{x.price}</td>
+                <td data-label='Total'>{x.price}</td>
               </tr>
             );
           })}
