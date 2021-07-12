@@ -1,7 +1,7 @@
 import React from 'react';
 import Products from './pages/Products/Products';
 import Navbar from './components/Navbar/Navbar';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Homepage from './pages/Homepage/Homepage';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
@@ -10,34 +10,19 @@ import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
 import data from './data.json';
 
-function App() {
-
+export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar/>
-      <Route exact path='/'>
-        <Homepage/>
-      </Route>
       <Switch>
-        <Route path='/products'>
-          <Products products={data.products}/>
-        </Route>
-        <Route path='/contact'>
-          <Contact/>
-        </Route>
-        <Route path='/about'>
-          <About/>
-        </Route>
-        <Route path='/productDetail/:id'>
-          <ProductDetail/>
-        </Route>
-        <Route path='/cart'>
-          <Cart/>
-        </Route>
+        <Route exact path='/' component={Homepage}/>
+        <Route path='/products' render={()=> <Products products={data.products}/>} />
+        <Route path='/contact' component={Contact}/>
+        <Route path='/about' component={About}/>
+        <Route path='/productDetail/:id' component={ProductDetail}/>
+        <Route path='/cart' component={Cart}/>
       </Switch>
       <Footer/>
-    </Router>
+    </BrowserRouter>
   );
 }
-
-export default App;

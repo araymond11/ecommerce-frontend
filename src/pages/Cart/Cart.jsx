@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../../store';
 import { useDispatch } from '../../store';
+import DeleteIcon from '@material-ui/icons/Delete';
 import './Cart.css';
 
 export default function Cart() {
@@ -30,7 +31,7 @@ export default function Cart() {
               <tr key={x.id}>
                 <td className='table__product'>
                   <img className='cart__img' src={x.image} alt="" />
-                  <button className='table__removeBtn' onClick={() => removeFromCart(index)}>Remove</button>
+                  <DeleteIcon className='icon__cursor' onClick={() => removeFromCart(index)}/>
                 </td>
                 <td data-label='Price'>{x.price}</td>
                 <td data-label='Quantity' className='alignCenter'>1</td>

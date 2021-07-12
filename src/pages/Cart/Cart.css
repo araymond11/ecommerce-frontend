@@ -23,6 +23,7 @@ td{
 
 .cart__img{
     width: 8rem;
+    margin-right: 1rem;
 }
 
 .checkout__btn{
@@ -68,6 +69,10 @@ td{
     background: none;
     cursor: pointer;
     padding-left: 1rem;
+}
+
+.icon__cursor{
+    cursor: pointer;
 }
 
 
