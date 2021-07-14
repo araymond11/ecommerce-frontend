@@ -13,4 +13,10 @@ describe('renders the product page', () => {
     cy.get('.productDetail__container').should('exist');
   });
   
+  it('adds a product to the cart', () => {
+    cy.get('button').first().click();
+    cy.get('.shop_btn').click();
+    cy.get('.nav_item:last-child').click();
+    cy.get('tbody tr').should('have.length', 1);
+  });
 });
