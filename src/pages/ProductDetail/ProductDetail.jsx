@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../data.json';
 import { useDispatch } from '../../store';
 import './ProductDetail.css';
 
 export default function ProductDetail(){
+
+  const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
 
@@ -18,6 +20,7 @@ export default function ProductDetail(){
   const product = getProductById(id);
 
   const addToCart = (product) => {
+    product.quantity = quantity;
     dispatch({ type: 'add product', product });
   };
 
@@ -39,7 +42,7 @@ export default function ProductDetail(){
             {product.description}
           </div>     
           <span>
-            <input type="number" name="quantity" defaultValue="1" min="1" className='productDetail__quantity' />
+            <input type="number" name="quantity" defaultValue="1" min="1" className='productDetail__quantity' onChange={e=>setQuantity(e.target.value)} />
             <button className='shop_btn' onClick={() => addToCart(product)}>Add to cart</button>
           </span>
         </div>
