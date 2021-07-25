@@ -20,7 +20,7 @@ export default function ProductDetail(){
   const product = getProductById(id);
 
   const addToCart = (product) => {
-    product.quantity = quantity;
+    product.quantity = parseInt(quantity);
     dispatch({ type: 'add product', product });
   };
 

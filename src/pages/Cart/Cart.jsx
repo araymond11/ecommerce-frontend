@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useCart } from '../../store';
 import ProductDetailTable from '../../components/ProductDetailTable/ProductDetailTable';
 import './Cart.css';
@@ -6,7 +6,20 @@ import './Cart.css';
 export default function Cart() {
 
   const products = useCart();
-  const totalPrice = products.reduce((total, item) => total + item.price, 0);
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    updateTotalPrice();
+  }, [total]);
+
+  const updateTotalPrice = () => {
+    let element = document.querySelectorAll('td[data-label="Total"]');
+    let totalPrice = 0.00;
+    element.forEach(x => {
+      totalPrice += parseFloat(x.innerText);
+    });
+    setTotal(totalPrice);
+  };
 
   return(
     <div className='page__width'>
@@ -22,13 +35,13 @@ export default function Cart() {
         <tbody>
           {products.map((x,index) =>{
             return(
-              <ProductDetailTable product={x} index={index} key={index}/>
+              <ProductDetailTable product={x} index={index} key={index} onClickChild={updateTotalPrice}/>
             );
           })}
         </tbody>
       </table>
       <div className='payment__container'>
-        <p className='subtotal'>Subtotal : {totalPrice.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
+        <p className='subtotal'>Subtotal : {total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
         <span>
           <button className='checkout__btn'>Check out</button>
         </span>

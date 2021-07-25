@@ -3,6 +3,7 @@ table {
     width: 100%;
     border-color: grey;
     border-spacing: 0;
+    table-layout: fixed;
 }
 
 table th, table td{
