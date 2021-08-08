@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../data.json';
-import { useDispatch } from '../../store';
+import { useDispatch } from '../../contexts/cart-context';
 import './ProductDetail.css';
 
 export default function ProductDetail(){

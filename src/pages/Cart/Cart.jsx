@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import { useCart } from '../../store';
+import { useCartProvider } from '../../contexts/cart-context';
 import ProductDetailTable from '../../components/ProductDetailTable/ProductDetailTable';
 import './Cart.css';
 
 export default function Cart() {
 
-  const products = useCart();
+  const products = useCartProvider();
   const [total, setTotal] = useState(0);
 
   useEffect(() => {

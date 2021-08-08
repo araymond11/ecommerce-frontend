@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { useDispatch } from '../../store';
+import { useDispatch } from '../../contexts/cart-context';
 
 export default function ProductDetailTable(props){
 

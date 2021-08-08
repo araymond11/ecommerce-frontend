@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { StateProvider } from './store.js';
+import { CartProvider } from './contexts/cart-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateProvider>
+    <CartProvider>
       <App />
-    </StateProvider>
+    </CartProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
