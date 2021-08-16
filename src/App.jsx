@@ -8,6 +8,7 @@ import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
+import { Checkout } from './pages/Checkout/Checkout';
 import data from './data.json';
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Route path='/about' component={About}/>
         <Route path='/productDetail/:id' component={ProductDetail}/>
         <Route path='/cart' component={Cart}/>
+        <Route path='/checkout' component={Checkout}/>
       </Switch>
       <Footer/>
     </BrowserRouter>
