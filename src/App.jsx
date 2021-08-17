@@ -10,6 +10,7 @@ import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
 import { Checkout } from './pages/Checkout/Checkout';
 import data from './data.json';
+import './App.scss';
 
 export default function App() {
   return (
