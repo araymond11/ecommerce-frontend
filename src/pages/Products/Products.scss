@@ -1,0 +1,31 @@
+.card{
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 3.125rem;
+    }
+
+    &__item{
+        padding: 1.25rem;
+    }
+
+    &__text{
+        &--textDecoration{
+            text-decoration: none;
+        }
+        &--black{
+            color: black;
+        }
+    }
+}
+
+.filter{
+    &__container{
+        float: right;
+        padding: 0.25rem;
+    }
+    &__row{
+        width: 100%;
+    }
+}

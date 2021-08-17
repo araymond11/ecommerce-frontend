@@ -6,8 +6,10 @@ import './Checkout.scss';
 export const Checkout = () => {
   return (
     <>
-      <h2>Checkout</h2>
-      <p>128.00$</p>
+      <div className='topBlock'>
+        <h2>Checkout</h2>
+        <p>128.00$</p>
+      </div>
 
       <Formik initialValues={{Firstname: '', Lastname: ''}} onSubmit={values => alert(JSON.stringify(values, null, 2))}>  
         <Form>
@@ -19,7 +21,7 @@ export const Checkout = () => {
           <Field class='input__field' name='State' placeholder ='State'/>
           <Field class='input__field' name='Postalcode' placeholder ='Postal code'/>
           <Field class='input__field' name='Phone' placeholder ='Phone'/>
-          <button type="submit">Submit</button>
+          <button type="submit" className='checkout__btn'>Submit</button>
         </Form>
       </Formik>
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import './Footer.scss';
 import { Link } from 'react-router-dom';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -9,30 +9,30 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 
 function Footer() {
   return (
-    <footer className='footer_container'>
+    <footer className='footer'>
       <div className='upper_section'>
-        <div className='footer_items'>
+        <div className='footer__items'>
           <h2>About Us</h2>
           <Link to='/'>Terms of Service</Link>
           <Link to='/'>How it works</Link>
           <Link to='/'>Testimonials</Link>
           <Link to='/'>Careers</Link>
         </div>
-        <div className='footer_items'>
+        <div className='footer__items'>
           <h2>Contact Us</h2>
           <Link to='/'>Destinations</Link>
           <Link to='/'>Sponsorships</Link>
           <Link to='/'>Contact</Link>
           <Link to='/'>Support</Link>
         </div>
-        <div className='footer_items'>
+        <div className='footer__items'>
           <h2>Our Products</h2>
           <Link to='/'>Standing desk</Link>
           <Link to='/'>Office chair</Link>
           <Link to='/'>Influencer</Link>
           <Link to='/'>Monitor</Link>
         </div>
-        <div className='footer_items'>
+        <div className='footer__items'>
           <h2>Social Media</h2>
           <Link to='/'>Instagram</Link>
           <Link to='/'>Facebook</Link>
@@ -41,7 +41,7 @@ function Footer() {
         </div>
       </div>
       <div className='bottom_section'>
-        <div className='social_media_link'>
+        <div className='socialMedia__link'>
           <Link to='/'><FacebookIcon fontSize="large"/></Link>
           <Link to='/'><TwitterIcon fontSize="large"/></Link>
           <Link to='/'><LinkedInIcon fontSize="large"/></Link>
@@ -49,8 +49,8 @@ function Footer() {
           <Link to='/'><PinterestIcon fontSize="large"/></Link>
         </div>
       </div>
-      <div className='website_rights_container'>
-        <small className='website_rights'>©Copyright. All rights reserved</small>
+      <div className='website__rights'>
+        <small className='website__rights--white'>©Copyright. All rights reserved</small>
       </div>
     </footer>
   );

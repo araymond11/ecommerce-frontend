@@ -1,0 +1,39 @@
+.contact{
+    &__text--32{
+        font-size: 2rem;
+    }
+    &__text--24{
+        font-size: 1.5rem;
+    }
+    &__sideBar{
+        width: 50%;
+        float: right;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        height: 25rem;
+    }
+    &__img{
+        height: 50%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact{
+        &__container{
+            padding: 1rem 0 1rem 0;
+            display: flex;
+            flex-direction: column;
+        }
+        &__sideBar{
+            width: auto;
+            height: 12.5rem;
+        }
+        &__img{
+            height: auto;
+            width: auto;
+        }
+    }
+}

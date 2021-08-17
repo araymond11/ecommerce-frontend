@@ -1,0 +1,139 @@
+.cover{
+    background: no-repeat;
+    height: 100vh;
+    background-size: 100% auto;
+    animation: ani 3s ease;
+
+    &__quote{
+        font: 2rem Futura;
+        text-transform: uppercase;
+        max-width: 43.75rem;
+        height: 50%;
+        animation: leftToRight 2.5s ease;
+        color: white;
+    }
+}
+
+.bottom{
+    &__img{
+        width: 100%;
+        height: auto;
+        max-height: 56.25rem;
+        text-decoration: none;
+        display: block;
+    }
+
+    &__spacer{
+        margin-bottom: 0.625rem;
+    }
+}
+
+.container{
+    &__left{
+        width: 50%;
+        font: 1.8rem Meta, sans-serif;
+    }
+
+    &__right{
+        height: auto;
+        width: 50%;
+        float: left;
+        display: flex;
+        justify-content: center;
+
+        &-img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop{
+    &__btn{
+        background-color: #3E879E;;
+        border: 0.25rem solid #3E879E;;
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0 1.75rem;
+        height: 2.875rem;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    &__link{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@keyframes ani {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes leftToRight {
+    from{
+        margin-right: 62.5rem;
+    }
+    to{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container__left{
+        padding: 1.875rem 0 0 0 !important;
+        height: 9.375rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cover{
+        height: 40vh;
+    }
+    .cover__quote{
+        font: 1.4rem Futura;
+        animation: none
+    }
+    .center{
+        flex-direction: column-reverse;
+    }
+    .container__right{
+        width: auto;
+    }
+    .container__left{
+        width: 80%;
+        font: 1.5rem Meta, sans-serif;
+        text-align: center;
+        padding: 3.125rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .cover{
+        height: 40vh;
+    }
+    .cover_quote{
+        font: 1.4rem Futura;
+        animation: none
+    }
+    .center{
+        flex-direction: column-reverse;
+    }
+    .container__right{
+        width: auto;
+    }
+    .container__left{
+        width: 80%;
+        font: 1.5rem Meta, sans-serif;
+        text-align: center;
+        padding: 1rem;
+    }
+}

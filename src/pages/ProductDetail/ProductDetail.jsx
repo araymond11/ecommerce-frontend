@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../data.json';
 import { useDispatch } from '../../contexts/cart-context';
-import './ProductDetail.css';
+import './ProductDetail.scss';
 
 export default function ProductDetail(){
 

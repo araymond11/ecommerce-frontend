@@ -4,6 +4,12 @@ form {
     padding: 3rem;
 }
 
+.topBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .input{
     &__field{
         padding: 0.75rem;
@@ -13,3 +19,5 @@ form {
         border-color: #d9d9d9;
     }
 }
+
+//form.... form__inputs...form__sumbit

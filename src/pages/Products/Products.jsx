@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
-import './Products.css';
+import './Products.scss';
 
 const useStyles = makeStyles({
   root: {
@@ -32,9 +32,9 @@ function Products(props) {
 
   return(
     <>
-      <div className='products_container'>
-        <span className='filter_row'>   
-          <div className='filter_container'>
+      <div className='card__container'>
+        <span className='filter__row'>   
+          <div className='filter__container'>
             <strong>Filter:</strong>
             <select onChange={(event) => filterProduct(event.target.value)}>
               <option value="All">All</option>
@@ -46,10 +46,10 @@ function Products(props) {
         {productFilteredByCategory
           .map((x, i)=> {
             return(
-              <div className='product_item' key={i}>
+              <div className='card__item' key={i}>
                 <Card className={classes.root}>
                   <CardActionArea>
-                    <Link to={{pathname: `/productDetail/${x.id}`}} className='product_detail_link'>
+                    <Link to={{pathname: `/productDetail/${x.id}`}} className='card__text--textDecoration card__text--black'>
                       <CardMedia
                         className={classes.media}
                         image={x.image}
