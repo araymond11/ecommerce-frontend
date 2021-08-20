@@ -5,13 +5,13 @@ import './Homepage.scss';
 export default function Homepage(){
   return (
     <>
-      <section className='cover center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover_media.png'})`}}>
+      <section className='cover display__center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover_media.png'})`}}>
         <div className='cover__quote'>Leading an ergonomically correct life is not expensive anymore</div>
       </section>
-      <section className='center'>
+      <section className='display__center column-reverse'>
         <div className='container__left'>
           <p className='center bottom__spacer'>Need new furnitures ? Check it out !</p>
-          <div className='center'>
+          <div className='display__center'>
             <Link to='/products' className='shop__link'>
               <button className='shop__btn'>Shop Now</button>
             </Link>
