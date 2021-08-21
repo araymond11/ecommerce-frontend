@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, { useState } from 'react';
 import { Wizard, Steps, Step } from 'react-albus';
 import './Checkout.scss';
 import '../../shared/utils.scss';
@@ -8,26 +8,26 @@ export const Checkout = () => {
 
   const [customerInfo, setCustomerInfo] = useState({});
 
-  const firstname = useRef(null);
-  const lastname = useRef(null);
-  const address = useRef(null);
-  const city = useRef(null);
-  const country = useRef(null);
-  const state = useRef(null);
-  const postalcode = useRef(null);
-  const phone = useRef(null);
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [state, setState] = useState('');
+  const [postalcode, setPostalCode] = useState('');
+  const [phone, setPhone] = useState('');
   
 
   const informationObjectCreator = () => {
     const data = {
-      firstname: firstname.current.value,
-      lastname: lastname.current.value,
-      address: address.current.value,
-      city: city.current.value,
-      country: country.current.value,
-      state: state.current.value,
-      postalcode: postalcode.current.value,
-      phone: phone.current.value
+      firstname: firstname,
+      lastname: lastname,
+      address: address,
+      city: city,
+      country: country,
+      state: state,
+      postalcode: postalcode,
+      phone: phone
     };
 
     setCustomerInfo({data});
@@ -46,14 +46,14 @@ export const Checkout = () => {
                   <p>128.00$</p>
                 </div>
                 <form>
-                  <input className='input__field' ref={firstname} name='Firstname' placeholder ='First name'/>
-                  <input className='input__field' ref={lastname} name='Lastname' placeholder ='Last name'/>
-                  <input className='input__field' ref={address} name='Address' placeholder ='Address'/>
-                  <input className='input__field' ref={city} name='City' placeholder ='City'/>
-                  <input className='input__field' ref={country} name='Country' placeholder ='Country'/>
-                  <input className='input__field' ref={state} name='State' placeholder ='State'/>
-                  <input className='input__field' ref={postalcode} name='Postalcode' placeholder ='Postal code'/>
-                  <input className='input__field' ref={phone} name='Phone' placeholder ='Phone'/>
+                  <input className='input__field' value={firstname} onChange={(e) => setFirstname(e.target.value)} name='Firstname' placeholder ='First name'/>
+                  <input className='input__field' value={lastname} onChange={(e) => setLastname(e.target.value)} name='Lastname' placeholder ='Last name'/>
+                  <input className='input__field' value={address} onChange={(e) => setAddress(e.target.value)} name='Address' placeholder ='Address'/>
+                  <input className='input__field' value={city} onChange={(e) => setCity(e.target.value)} name='City' placeholder ='City'/>
+                  <input className='input__field' value={country} onChange={(e) => setCountry(e.target.value)} name='Country' placeholder ='Country'/>
+                  <input className='input__field' value={state} onChange={(e) => setState(e.target.value)} name='State' placeholder ='State'/>
+                  <input className='input__field' value={postalcode} onChange={(e) => setPostalCode(e.target.value)} name='Postalcode' placeholder ='Postal code'/>
+                  <input className='input__field' value={phone} onChange={(e) => setPhone(e.target.value)} name='Phone' placeholder ='Phone'/>
                   <button type='submit' className='checkout__btn' onClick={() => {informationObjectCreator(); next();}}>Continue to shipping</button>
                 </form>
               </div>
@@ -77,7 +77,7 @@ export const Checkout = () => {
                 <div className='shipping__method'>
                   <h2>Shipping method</h2>
                   <div className='content content__spacer'>
-                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector' checked='checked'/>
+                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector'/>
                     <span className='margin__right--auto'>FedEx Ground Shipping</span>
                     <span>Free</span>
                   </div>
