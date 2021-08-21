@@ -35,17 +35,16 @@ export const Checkout = () => {
 
   return (
     <div className='shipping__container'>
-      <div className='topBlock'>
-        <h2>Checkout</h2>
-        <p>128.00$</p>
-      </div>
-
       <Wizard>
         <Steps>
           <Step
             id="information"
             render={({next}) => (
               <div>
+                <div className='topBlock'>
+                  <h2>Checkout</h2>
+                  <p>128.00$</p>
+                </div>
                 <form>
                   <input className='input__field' ref={firstname} name='Firstname' placeholder ='First name'/>
                   <input className='input__field' ref={lastname} name='Lastname' placeholder ='Last name'/>
@@ -64,6 +63,10 @@ export const Checkout = () => {
             id="shipping"
             render={({ next, previous }) => (
               <div className='shipping'>
+                <div className='topBlock'>
+                  <h2>Checkout</h2>
+                  <p>128.00$</p>
+                </div>
                 <h2>Ship to </h2>
                 <div className='content'>
                   {customerInfo.data.firstname} {customerInfo.data.lastname}
@@ -73,14 +76,20 @@ export const Checkout = () => {
                 </div>
                 <div className='shipping__method'>
                   <h2>Shipping method</h2>
-                  <div className='content'>
-                  Free FedEx Ground Shipping
+                  <div className='content content__spacer'>
+                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector' checked='checked'/>
+                    <span className='margin__right--auto'>FedEx Ground Shipping</span>
+                    <span>Free</span>
                   </div>
-                  <div className='content'>
-                  FedEx 2 Day
+                  <div className='content content__spacer'>
+                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector'/>
+                    <span className='margin__right--auto'>FedEx 2 Day</span>
+                    <span>100.64$</span>
                   </div>
-                  <div className='content'>
-                  FedEx Standard Overnight
+                  <div className='content content__spacer'>
+                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector'/>
+                    <span className='margin__right--auto'>FedEx Standard Overnight</span>
+                    <span>124.16$</span>
                   </div>
                 </div>
                 <div className='display__center flexDirection__column'>
@@ -92,6 +101,15 @@ export const Checkout = () => {
                     <button className='return' onClick={previous}>Return to information</button>
                   </span>
                 </div>
+              </div>
+            )}
+          />
+          <Step
+            id="payment"
+            render={({previous}) => (
+              <div>
+                <h2>Payment page</h2>
+                <button onClick={previous}>previous</button>
               </div>
             )}
           />

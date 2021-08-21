@@ -11,3 +11,11 @@
         flex-direction: column;
     }
 }
+
+.margin{
+    &__right{
+        &--auto{
+            margin-right: auto;
+        }
+    }
+}
