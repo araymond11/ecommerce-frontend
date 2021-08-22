@@ -21,7 +21,7 @@ export default function Cart() {
     });
     setTotal(totalPrice);
   };
-
+  
   return(
     <div className='cart'>
       <table>
@@ -45,7 +45,7 @@ export default function Cart() {
         <p className='cart__subtotal'>Subtotal : {total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
         <span>
           <Link to='/checkout'>
-            <button className='checkout__btn'>
+            <button onClick={() => console.log(products)} className='checkout__btn'>
               Check out
             </button>
           </Link>

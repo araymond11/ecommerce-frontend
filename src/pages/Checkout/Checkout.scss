@@ -1,7 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .topBlock{
@@ -38,7 +38,7 @@ form {
 }
 
 .shipping{
-    margin: 3rem 1rem 0 1rem;
+    margin: 1rem 1rem 0 1rem;
     &__method{
         margin-top: 3rem;
     }

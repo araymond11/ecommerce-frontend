@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useCartProvider } from '../../contexts/cart-context';
 import { Wizard, Steps, Step } from 'react-albus';
 import './Checkout.scss';
 import '../../shared/utils.scss';
@@ -6,7 +7,10 @@ import '../../shared/utils.scss';
 
 export const Checkout = () => {
 
+  const products = useCartProvider();
+
   const [customerInfo, setCustomerInfo] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
@@ -17,6 +21,14 @@ export const Checkout = () => {
   const [postalcode, setPostalCode] = useState('');
   const [phone, setPhone] = useState('');
   
+
+  useEffect(() => {
+    let price = 0;
+    products.forEach(x => {
+      price += x.quantity * x.price;
+    });
+    setTotalPrice(totalPrice + price);
+  }, []);
 
   const informationObjectCreator = () => {
     const data = {
@@ -43,7 +55,7 @@ export const Checkout = () => {
               <div>
                 <div className='topBlock'>
                   <h2>Checkout</h2>
-                  <p>128.00$</p>
+                  <p>{totalPrice}$</p>
                 </div>
                 <form>
                   <input className='input__field' value={firstname} onChange={(e) => setFirstname(e.target.value)} name='Firstname' placeholder ='First name'/>
@@ -65,7 +77,7 @@ export const Checkout = () => {
               <div className='shipping'>
                 <div className='topBlock'>
                   <h2>Checkout</h2>
-                  <p>128.00$</p>
+                  <p>{totalPrice}$</p>
                 </div>
                 <h2>Ship to </h2>
                 <div className='content'>
