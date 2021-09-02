@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCartProvider } from '../../contexts/cart-context';
 import { Wizard, Steps, Step } from 'react-albus';
+import processCheckoutPayment from '../../services/api';
 import './Checkout.scss';
 import '../../shared/utils.scss';
 
@@ -20,7 +21,6 @@ export const Checkout = () => {
   const [state, setState] = useState('');
   const [postalcode, setPostalCode] = useState('');
   const [phone, setPhone] = useState('');
-  
 
   useEffect(() => {
     let price = 0;
@@ -43,6 +43,12 @@ export const Checkout = () => {
     };
 
     setCustomerInfo({data});
+  };
+
+  const payment = async (e) => {
+    e.preventDefault();
+
+    processCheckoutPayment(products);
   };
 
   return (
@@ -73,7 +79,7 @@ export const Checkout = () => {
           />
           <Step
             id="shipping"
-            render={({ next, previous }) => (
+            render={({ previous }) => (
               <div className='shipping'>
                 <div className='topBlock'>
                   <h2>Checkout</h2>
@@ -105,7 +111,7 @@ export const Checkout = () => {
                   </div>
                 </div>
                 <div className='display__center flexDirection__column'>
-                  <button className='btn' onClick={next}>Continue to payment</button>
+                  <button className='btn' onClick={payment}>Continue to payment</button>
                   <span className='display__center'>
                     <svg className='svg__dimension' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"viewBox="0 0 35.3 58.8" enableBackground="new 0 0 35.3 58.8" xmlSpace="preserve">
                       <path fillRule="evenodd" clipRule="evenodd" fill="#3E3E3E" d="M29.4,2.7L2.8,29.2c-0.2,0.3-0.2,0.8,0,1.1l26.6,26.5c0.2,0.3,0.7,0.3,1,0l3.5-3.4L10.8,30.3c-0.4-0.2-0.4-0.7,0-1.1L33.9,6.1l-3.5-3.5C30.2,2.2,29.7,2.2,29.4,2.7L29.4,2.7z"/>
@@ -113,15 +119,6 @@ export const Checkout = () => {
                     <button className='return' onClick={previous}>Return to information</button>
                   </span>
                 </div>
-              </div>
-            )}
-          />
-          <Step
-            id="payment"
-            render={({previous}) => (
-              <div>
-                <h2>Payment page</h2>
-                <button onClick={previous}>previous</button>
               </div>
             )}
           />
