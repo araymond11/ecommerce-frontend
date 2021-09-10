@@ -1,65 +1,76 @@
-.cover{
-    background: no-repeat;
-    height: 100vh;
-    background-size: 100% auto;
-    animation: ani 3s ease;
+.topPage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        margin-left: 2rem;
+        max-width: 18rem;
+        &__paragraphe{
+            margin-bottom: 1rem;
+            width: 80%;
+            word-break: break-word;
+        }
+    }
+    &__img{
+        max-width: 60%;
+        height: 100%;
+        width: 100%;
+    }
+}
 
-    &__quote{
-        font: 2rem Futura;
-        text-transform: uppercase;
-        max-width: 43.75rem;
-        height: 50%;
-        animation: leftToRight 2.5s ease;
+.wave{
+    position: relative;
+    &__img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+}
+
+.midPage{
+    background: linear-gradient(#267FF1, #0A224F);
+    padding-top: 8rem;
+    &__img{
+        &-size{
+            height: 20rem; 
+        }
+    }
+    &__header{
         color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    &__paragraphe{
+        color: white;
+        padding: 0 3rem;
+        word-break: break-word;
+        max-width: 60%;
+        letter-spacing: 1px;
+        text-align: center;
     }
 }
 
 .bottom{
-    &__img{
-        width: 100%;
-        height: auto;
-        max-height: 56.25rem;
-        text-decoration: none;
-        display: block;
-    }
-
     &__spacer{
         margin-bottom: 0.625rem;
     }
 }
 
-.container{
-    &__left{
-        width: 50%;
-        font: 1.8rem Meta, sans-serif;
-    }
-
-    &__right{
-        height: auto;
-        width: 50%;
-        float: left;
-        display: flex;
-        justify-content: center;
-
-        &-img{
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .shop{
     &__btn{
-        background-color: #3E879E;;
-        border: 0.25rem solid #3E879E;;
+        background-color: #6EC955;;
+        border: 0.25rem solid #6EC955;;
         color: #fff;
-        border-radius: 0.25rem;
+        border-radius: 0.50rem;
         padding: 0 1.75rem;
         height: 2.875rem;
+        width: 8rem;
         font-size: 1rem;
         cursor: pointer;
     }

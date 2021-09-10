@@ -1,29 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Homepage.scss';
 
 export default function Homepage(){
   return (
     <>
-      <section className='cover display__center' style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/cover_media.png'})`}}>
-        <div className='cover__quote'>Leading an ergonomically correct life is not expensive anymore</div>
-      </section>
-      <section className='display__center column-reverse'>
-        <div className='container__left'>
-          <p className='center bottom__spacer'>Need new furnitures ? Check it out !</p>
+      <section>
+        <div className='topPage'>
           <div className='display__center'>
-            <Link to='/products' className='shop__link'>
-              <button className='shop__btn'>Shop Now</button>
-            </Link>
+            <div className='topPage-left'>
+              <p className='topPage-left__paragraphe font__principal'>Be the place where people will work not because they have to, but because they want to.</p>
+              <button className='shop__btn font__principal'>Buy now</button>
+            </div>
+          </div>
+          <div className='display__center'>
+            <img className='topPage__img' src={process.env.PUBLIC_URL + 'office_img.png'} loading="lazy" alt=""/>
           </div>
         </div>
-        <div className='container__right'>
-          <img className='container__right-img' src={process.env.PUBLIC_URL + '/luxury_office.jpg'} loading="lazy" alt=""/>
+      </section>
+      <section className='wave display__center column-reverse'>
+        <img className='wave__img' src={process.env.PUBLIC_URL + 'wave.svg'} loading="lazy" alt=""/>
+        <div className='midPage'>
+          <div>
+            <p className='midPage__header display__center font__principal'>Everybody is different</p>
+            <div className='display__center'>
+              <p className='midPage__paragraphe font__principal'>By recognizing that individuals and organizations have their own unique purpose, character, and activities, Living Office transforms the workplace into a powerful instrument that expresses an organization’s unique culture and progresses its unique ambitions.</p>
+            </div>
+          </div>
+          <div className='display__center'>
+            <img className='midPage__img-size' src={process.env.PUBLIC_URL + 'office_mobile.png'} loading="lazy" alt=""/>
+          </div>
         </div>
       </section>
       <section>
         <div>
-          <img className='bottom__img' src={process.env.PUBLIC_URL + '/bottom_picture.jpg'} loading="lazy" alt=""/>
         </div>
       </section>
     </>
