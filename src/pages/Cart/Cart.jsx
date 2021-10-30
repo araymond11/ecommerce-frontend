@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useCartProvider } from '../../contexts/cart-context';
 import ProductDetailTable from '../../components/ProductDetailTable/ProductDetailTable';
 import { Link } from 'react-router-dom';
+import { Button } from '../../components/Button/Button';
 import './Cart.scss';
 
 export default function Cart() {
@@ -45,9 +46,7 @@ export default function Cart() {
         <p className='cart__subtotal'>Subtotal : {total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
         <span>
           <Link to='/checkout'>
-            <button className='checkout__btn'>
-              Check out
-            </button>
+            <Button primary={false} size={'medium'} label={'Check out'}/>
           </Link>
         </span>
       </div>

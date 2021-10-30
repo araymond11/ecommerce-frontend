@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../data.json';
 import { useDispatch } from '../../contexts/cart-context';
+import { Button } from '../../components/Button/Button';
 import './ProductDetail.scss';
 
 export default function ProductDetail(){
@@ -43,7 +44,7 @@ export default function ProductDetail(){
           </div>     
           <span>
             <input type="number" name="quantity" defaultValue="1" min="1" className='productDetail__quantity' onChange={e=>setQuantity(e.target.value)} />
-            <button className='shop_btn' onClick={() => addToCart(product)}>Add to cart</button>
+            <Button primary={false} size={'medium'} label={'Add to cart'} onClick={addToCart(product)}/>
           </span>
         </div>
       </div>

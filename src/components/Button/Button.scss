@@ -1,0 +1,18 @@
+.button{
+    color: #fff;
+    border-radius: 0.50rem;
+    font-size: 1rem;
+    cursor: pointer;
+    &--primary{
+        background-color: #6EC955;
+        border: 0.25rem solid #6EC955;
+    }
+    &--secondary{
+        background-color: #3E879E;;
+        border: 0.25rem solid #3E879E;;
+    }
+    &--medium{
+        padding: 0 1.75rem;
+        height: 2.875rem;
+    }
+}
