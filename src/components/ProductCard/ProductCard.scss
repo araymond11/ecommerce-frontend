@@ -1,0 +1,10 @@
+.card{
+    &__text{
+        &--textDecoration{
+            text-decoration: none;
+        }
+        &--black{
+            color: black;
+        }
+    }
+}
