@@ -5,7 +5,7 @@ describe('renders the product page', () => {
   });
 
   it('renders the product page correctly', () => {
-    cy.get('.products_container').should('exist');
+    cy.get('.card_container').should('exist');
   });
 
   it('redirects to the product detail', () => {

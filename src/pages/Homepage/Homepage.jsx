@@ -1,10 +1,10 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import '../../components/Button/Button';
 import { Button } from '../../components/Button/Button';
+import { Link } from 'react-router-dom';
 import './Homepage.scss';
 
 export default function Homepage(){
+
   return (
     <>
       <section>
@@ -12,7 +12,9 @@ export default function Homepage(){
           <div className='display__center'>
             <div className='topPage-left'>
               <p className='topPage-left__paragraphe font__principal'>Be the place where people will work not because they have to, but because they want to.</p>
-              <Button primary={true} size={'medium'} label={'Buy now'}/>
+              <Link to='/products'>
+                <Button primary={true} size={'medium'} label={'Buy now'}/>
+              </Link>
             </div>
           </div>
           <div className='display__center'>

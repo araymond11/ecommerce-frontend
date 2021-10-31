@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { ProductCard } from '../../components/ProductCard/ProductCard';
+import { Link } from 'react-router-dom';
 import './Products.scss';
 
 
@@ -30,7 +31,9 @@ function Products(props) {
           .map((x, i)=> {
             return(
               <div className='card__item' key={i}>
-                <ProductCard id={x.id} image={x.image} name={x.name} description={x.description} price={x.price}/>
+                <Link to={{pathname: `/productDetail/${x.id}`}} className='card__text--textDecoration card__text--black'>
+                  <ProductCard id={x.id} image={x.image} name={x.name} description={x.description} price={x.price}/>
+                </Link>
               </div>
             );
           })}
