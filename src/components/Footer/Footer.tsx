@@ -7,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className='footer'>
       <div className='upper_section'>
@@ -54,6 +54,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

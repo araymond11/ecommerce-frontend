@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { Product } from '../../types/interfaces';
 import './ProductCard.scss';
 
 const useStyles = makeStyles({
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const ProductCard = ({image, name, description, price}) => {
+const ProductCard:React.FC<Product> = ({image, name, description, price}) => {
   const classes = useStyles();
   return(
     <Card className={classes.root}>
@@ -46,9 +46,4 @@ export const ProductCard = ({image, name, description, price}) => {
   );
 };
 
-ProductCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-};
+export default ProductCard;

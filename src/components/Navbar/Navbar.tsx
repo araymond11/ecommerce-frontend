@@ -5,7 +5,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import './Navbar.scss';
 
 
-export default function Navbar() {
+const Navbar = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -48,4 +48,5 @@ export default function Navbar() {
       </nav>
     </div>
   );
-}
+};
+export default Navbar;

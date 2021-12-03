@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button/Button';
 import './Cart.scss';
 
-export default function Cart() {
-
+const Cart = () => {
   const products = useCartProvider();
   const [total, setTotal] = useState(0);
 
@@ -52,4 +51,6 @@ export default function Cart() {
       </div>
     </div>
   );
-}
+};
+
+export default Cart;

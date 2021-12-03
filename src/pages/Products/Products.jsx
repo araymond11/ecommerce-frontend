@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { ProductCard } from '../../components/ProductCard/ProductCard';
+import ProductCard from '../../components/ProductCard/ProductCard';
 import { Link } from 'react-router-dom';
 import './Products.scss';
 
