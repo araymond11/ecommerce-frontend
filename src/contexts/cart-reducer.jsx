@@ -4,12 +4,12 @@ const cartReducer = (state,action) => {
     const arr = [...state];
     let isAlreadyInCart;
     arr.find(x => {
-      x.id == action.product.id ? isAlreadyInCart = true : isAlreadyInCart = false;
+      return x.id === action.product.id ? isAlreadyInCart = true : isAlreadyInCart = false;
     });
     if(isAlreadyInCart){
       let newArr = arr.map(x => {
         let temp = Object.assign({}, x);
-        if(temp.id == action.product.id){
+        if(temp.id === action.product.id){
           temp.quantity += action.product.quantity;
         }
         return temp;
@@ -27,7 +27,7 @@ const cartReducer = (state,action) => {
     const arr = [...state];
     let newArr = arr.map(x => {
       let temp = Object.assign({}, x);
-      if(temp.id == action.prop.id){
+      if(temp.id === action.prop.id){
         temp.quantity = parseInt(action.prop.number);
       }
       return temp;

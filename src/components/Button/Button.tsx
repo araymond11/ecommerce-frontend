@@ -2,10 +2,10 @@ import React from 'react';
 import './Button.scss';
 
 interface ButtonProps {
-  primary: string,
+  primary: boolean,
   size: string,
   label: string,
-  onClick: () => void
+  onClick?: () => void;
 }
 
 export const Button:React.FC<ButtonProps> = ({primary, size, label, onClick}) => {

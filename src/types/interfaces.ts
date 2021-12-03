@@ -4,11 +4,16 @@ export interface Product {
     name: string,
     description: string,
     price: number,
-    quantity: number
+    quantity?: number,
+    category?: string
 }
 
 export interface ProductTable {
     product: Product,
     index: string,
     onClick: () => void
+}
+
+export interface ProductParam {
+    id:string;
 }

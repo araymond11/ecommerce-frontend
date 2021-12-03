@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { Link } from 'react-router-dom';
+import { Product } from '../../types/interfaces';
 import './Products.scss';
 
 
-function Products(props) {
+const Products:React.FC<{products: Product[]}> = (props) => {
   const [filter, setFilter] = useState('All');
-  const { products } = props;
-  const productFilteredByCategory = products.filter(products => filter === 'All' || products.category === filter);
+  const productFilteredByCategory = props.products.filter((product:Product) => filter === 'All' || product.category === filter);
 
-  const filterProduct = async (e) => {
-    setFilter(await e);
+  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    let newFilter = (event.target.value).toString();
+    setFilter(newFilter);
   };
 
 
@@ -20,7 +21,7 @@ function Products(props) {
         <span className='filter__row'>   
           <div className='filter__container'>
             <strong>Filter:</strong>
-            <select onChange={(event) => filterProduct(event.target.value)}>
+            <select onChange={onChange}>
               <option value="All">All</option>
               <option value="Chair">Chair</option>
               <option value="Lamp">Lamp</option>
@@ -40,6 +41,6 @@ function Products(props) {
       </div>
     </>
   );
-}
+};
 
 export default Products;
