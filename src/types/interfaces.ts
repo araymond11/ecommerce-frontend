@@ -14,6 +14,6 @@ export interface ProductTable {
     onClick: () => void
 }
 
-export interface ProductParam {
-    id:string;
+export type ProductParam = {
+    id: string;
 }
