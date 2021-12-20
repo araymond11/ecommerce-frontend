@@ -27,8 +27,8 @@ export const Checkout = () => {
     products.forEach(x => {
       price += x.quantity * x.price;
     });
-    setTotalPrice(totalPrice + price);
-  }, []);
+    setTotalPrice(price);
+  }, [products]);
 
   const informationObjectCreator = () => {
     const data = {
