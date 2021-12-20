@@ -4,7 +4,7 @@ import { useDispatch } from '../../contexts/cart-context';
 import { ProductTable } from '../../types/interfaces';
 import './ProductDetailTable.scss';
 
-const ProductDetailTable: React.FC<ProductTable> = ({product, index, onClick}) => {
+const ProductDetailTable: React.FC<ProductTable> = ({product, index}) => {
 
   const [quantity, setQuantity] = useState(1);
 

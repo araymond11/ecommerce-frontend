@@ -10,8 +10,7 @@ export interface Product {
 
 export interface ProductTable {
     product: Product,
-    index: string,
-    onClick: () => void
+    index: string
 }
 
 export type ProductParam = {
