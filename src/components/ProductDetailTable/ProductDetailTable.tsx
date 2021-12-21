@@ -40,7 +40,7 @@ const ProductDetailTable: React.FC<ProductTable> = ({product, index}) => {
       </td>
       <td data-label='Price'>{product.price}</td>
       <td data-label='Quantity' className='alignCenter'>
-        <input type="text" name="quantity" className='productDetail__quantity' value={quantity} onChange={onChange}/>
+        <input type="text" name="quantity" className='product-detail__quantity' value={quantity} onChange={onChange}/>
       </td>
       <td data-label='Total'>{(quantity * product.price).toFixed(2)}</td>
     </tr>
