@@ -40,22 +40,22 @@ const ProductDetail = () => {
 
   return(
     <>
-      <div className='productDetail__container'>
-        <div className='productDetail__container--left'>
-          <img src={product && product.image} alt="" className='productDetail__img'/>
+      <div className='product-detail__container'>
+        <div className='product-detail__container--left'>
+          <img src={product && product.image} alt="" className='product-detail__img'/>
         </div>
-        <div className='productDetail__container--right'>
-          <h1 className='bottomSpacer__1rem'>
+        <div className='product-detail__container--right'>
+          <h1 className='bottom-spacer__1rem'>
             {product && product.name}
           </h1>
-          <div className='bottomSpacer__1rem'>
+          <div className='bottom-spacer__1rem'>
             {product && product.price}$
           </div>
-          <div className='productDetail__description bottomSpacer__1rem'>
+          <div className='product-detail__description bottom-spacer__1rem'>
             {product && product.description}
           </div>     
           <span>
-            <input type="number" name="quantity" defaultValue="1" min="1" className='productDetail__quantity' onChange={onChange} />
+            <input type="number" name="quantity" defaultValue="1" min="1" className='product-detail__quantity' onChange={onChange} />
             <Button primary={false} size={'medium'} label={'Add to cart'} onClick={onClick}/>
           </span>
         </div>

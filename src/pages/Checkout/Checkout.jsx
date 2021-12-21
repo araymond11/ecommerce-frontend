@@ -95,17 +95,17 @@ export const Checkout = () => {
                 <div className='shipping__method'>
                   <h2>Shipping method</h2>
                   <div className='content content__spacer'>
-                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector'/>
+                    <input className='radio-btn__spacer--right' type="radio" name='shippingSelector'/>
                     <span className='margin__right--auto'>FedEx Ground Shipping</span>
                     <span>Free</span>
                   </div>
                   <div className='content content__spacer'>
-                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector'/>
+                    <input className='radio-btn__spacer--right' type="radio" name='shippingSelector'/>
                     <span className='margin__right--auto'>FedEx 2 Day</span>
                     <span>100.64$</span>
                   </div>
                   <div className='content content__spacer'>
-                    <input className='radioBtn__spacer--right' type="radio" name='shippingSelector'/>
+                    <input className='radio-btn__spacer--right' type="radio" name='shippingSelector'/>
                     <span className='margin__right--auto'>FedEx Standard Overnight</span>
                     <span>124.16$</span>
                   </div>

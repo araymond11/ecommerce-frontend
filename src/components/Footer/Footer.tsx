@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='bottom_section'>
-        <div className='socialMedia__link'>
+        <div className='socia-media__link'>
           <Link to='/'><FacebookIcon fontSize="large"/></Link>
           <Link to='/'><TwitterIcon fontSize="large"/></Link>
           <Link to='/'><LinkedInIcon fontSize="large"/></Link>

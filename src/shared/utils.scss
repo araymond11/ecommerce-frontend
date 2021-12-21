@@ -1,27 +1,27 @@
-.display{
-    &__center{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.display {
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.flexDirection{
-    &__column{
-        flex-direction: column;
-    }
+.flex-direction {
+  &__column {
+    flex-direction: column;
+  }
 }
 
-.margin{
-    &__right{
-        &--auto{
-            margin-right: auto;
-        }
+.margin {
+  &__right {
+    &--auto {
+      margin-right: auto;
     }
+  }
 }
 
-.font{
-    &__principal{
-        font-family: Montserrat, sans-serif;
-    }
+.font {
+  &__principal {
+    font-family: Montserrat, sans-serif;
+  }
 }
