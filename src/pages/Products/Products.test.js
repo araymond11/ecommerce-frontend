@@ -2,7 +2,7 @@ import React from 'react';
 //import { render, screen, unmountComponentAtNode } from '@testing-library/react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import Products from './Products.jsx';
+import Products from './Products.tsx';
 
 let container = null;
 beforeEach(() => {
