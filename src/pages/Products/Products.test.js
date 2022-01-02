@@ -1,6 +1,7 @@
 import React from 'react';
 //import { render, screen, unmountComponentAtNode } from '@testing-library/react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 import Products from './Products.tsx';
 
@@ -28,7 +29,11 @@ it('renders product data', async () => {
   }];
 
   await act( async () => {
-    render(<Products products={fakeProduct}/>, container);
+    render(
+      <BrowserRouter>
+        <Products products={fakeProduct}/>
+      </BrowserRouter>
+      , container);
   });
   
   expect(container.querySelector('h2').textContent).toBe(fakeProduct[0].name);
