@@ -1,9 +1,9 @@
 table {
   margin: 1rem 0;
-  width: 100%;
+  width: 60%;
   border-color: grey;
-  border-spacing: 0;
-  table-layout: fixed;
+  border-spacing: 0 1.25rem;
+  table-layout: auto;
 }
 
 .table__product {
@@ -19,19 +19,22 @@ table {
   padding-left: 1rem;
 }
 
-table th,
-table td {
-  border-bottom: 1px solid #aaaeb0;
+
+td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+td:last-child {
+  border-radius: 0 10px 10px 0;
 }
 
 td {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  background-color: #FAFAFA;
 }
 
 .cart__img {
-  width: 8rem;
+  width: 4rem;
   margin-right: 1rem;
+  margin-left: 2rem;
 }
 
 .icon__cursor {

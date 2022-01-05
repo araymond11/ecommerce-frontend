@@ -42,13 +42,16 @@ const Cart = () => {
           })}
         </tbody>
       </table>
-      <div className='cart__bottomContainer'>
-        <p className='cart__subtotal'>Subtotal : {total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
-        <span>
+      <div className='recap-area'>
+        <span className='subtotal-container'>
+          <p>Subtotal</p>
+          <p>{total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
+        </span>
+        <div className='button-container'>
           <Link to='/checkout'>
             <Button primary={false} size={'medium'} label={'Check out'}/>
           </Link>
-        </span>
+        </div>
       </div>
     </div>
   );

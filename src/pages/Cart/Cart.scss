@@ -1,5 +1,6 @@
 .cart {
-  max-width: 1600px;
+  display: flex;
+  max-width: 81.25rem;
   margin: 0 auto;
   text-align: left;
   font-family: Roboto, sans-serif;
@@ -16,13 +17,24 @@
   }
 }
 
-.checkout__btn {
-  background-color: #3e879e;
-  border: 0.25rem solid #3e879e;
-  color: #fff;
-  border-radius: 0.25rem;
-  padding: 0 1.75rem;
-  height: 2.875rem;
-  font-size: 1rem;
-  cursor: pointer;
+.recap-area {
+  background-color: #E2EFF3;
+  width: 25%;
+  border-radius: 10px;
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 6rem;
+  margin-top: 2rem;
+}
+
+.subtotal-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
