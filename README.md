@@ -6,3 +6,4 @@ This is a personal frontend project to try and learn new things with no dependen
 * Jest
 * Cypress
 * Github Actions
+* Storybook
