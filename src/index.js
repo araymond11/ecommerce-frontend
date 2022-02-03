@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './locales/locales';
 import reportWebVitals from './reportWebVitals';
 import { CartProvider } from './contexts/cart-context';
 
