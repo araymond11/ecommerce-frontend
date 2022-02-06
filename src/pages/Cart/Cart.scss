@@ -5,6 +5,17 @@
   text-align: left;
   font-family: Roboto, sans-serif;
 
+  &__empty{
+    text-align: center;
+    padding-top: 8rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+
+  &__container{
+    min-height: 30rem;
+  }
+
   &__subtotal {
     margin-bottom: 1rem;
     font-size: 1.5rem;

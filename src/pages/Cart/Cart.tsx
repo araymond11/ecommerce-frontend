@@ -23,36 +23,42 @@ const Cart = () => {
     setTotal(totalPrice);
   };
 
+
   return(
-    <div className='cart'>
-      <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Qty</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((x: Product, index:string) =>{
-            return(
-              <ProductDetailTable product={x} index={index} key={index}/>
-            );
-          })}
-        </tbody>
-      </table>
-      <div className='recap-area'>
-        <span className='subtotal-container'>
-          <p>Subtotal</p>
-          <p>{total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
-        </span>
-        <div className='button-container'>
-          <Link to='/checkout'>
-            <Button primary={false} size={'medium'} label={'Check out'}/>
-          </Link>
+    <div className='cart__container'>
+      {products.length === 0 ? 
+        <p className='cart__empty'>The cart is empty</p> :  
+        <div className='cart'>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((x: Product, index:string) =>{
+                return(
+                  <ProductDetailTable product={x} index={index} key={index}/>
+                );
+              })}
+            </tbody>
+          </table>
+          <div className='recap-area'>
+            <span className='subtotal-container'>
+              <p>Subtotal</p>
+              <p>{total.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
+            </span>
+            <div className='button-container'>
+              <Link to='/checkout'>
+                <Button primary={false} size={'medium'} label={'Check out'}/>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      }
     </div>
   );
 };

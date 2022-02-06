@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PersonIcon from '@material-ui/icons/Person';
 import './Navbar.scss';
 
 
@@ -42,6 +43,11 @@ const Navbar = () => {
           <li className='navbar__item'>
             <Link to='/cart' className='navbar__links' onClick={closeMobileMenu}>
               <ShoppingCartIcon/>
+            </Link>
+          </li>
+          <li className='navbar__item'>
+            <Link to='/login' className='navbar__links' onClick={closeMobileMenu}>
+              <PersonIcon/>
             </Link>
           </li>
         </ul>
