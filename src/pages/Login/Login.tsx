@@ -37,7 +37,7 @@ const Login = () => {
   return(
     <div className='login__container'>
       <Box className="login__box">
-        <Typography id="modal-modal-title" variant="h6" component="h2">
+        <Typography id="modal-modal-title">
           {t('login')}
         </Typography>
         <Formik
@@ -48,26 +48,25 @@ const Login = () => {
           }}
           validationSchema={SignupSchema}
           onSubmit={values => {
- 
           }}
         >
           {({ errors, touched }) => (
             <Form>
               <div className='input__container'>
                 <label>{t('email')}</label>
-                <Field name="email"/>
+                <Field name="email" className="login__input"/>
                 {errors.email && touched.email ? (
                   <div className="login__error">{errors.email}</div>
                 ) : null}
               </div>
               <div className='input__container'>
                 <label>{t('password')}</label>
-                <Field name="password"/>
+                <Field name="password" className="login__input"/>
                 {errors.password && touched.password ? (
                   <div className="login__error">{errors.password}</div>
                 ) : null}
               </div>
-              <Button type="submit" variant="contained" size="large">{t('submit')}</Button>
+              <Button type="submit" variant="contained" className='login__button--length'>{t('submit')}</Button>
             </Form>
           )}
         </Formik>
