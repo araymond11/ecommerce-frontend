@@ -54,13 +54,6 @@ const Login = () => {
           {({ errors, touched }) => (
             <Form>
               <div className='input__container'>
-                <label>{t('firstName')}</label>
-                <Field name="firstName"/>
-                {errors.firstName && touched.firstName ? (
-                  <div className="login__error">{errors.firstName}</div>
-                ) : null}
-              </div>
-              <div className='input__container'>
                 <label>{t('email')}</label>
                 <Field name="email"/>
                 {errors.email && touched.email ? (

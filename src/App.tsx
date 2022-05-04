@@ -19,7 +19,7 @@ export default function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route exact path='/' element={<Homepage/>}/>
+        <Route path='/' element={<Homepage/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/products' element={<Products products={data.products}/>} />

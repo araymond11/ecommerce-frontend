@@ -79,6 +79,8 @@
   }
 
   .upper_section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     flex-direction: column;
     padding-bottom: 1rem;
   }
