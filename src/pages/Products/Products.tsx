@@ -7,11 +7,18 @@ import './Products.scss';
 
 const Products:React.FC<{products: Product[]}> = (props) => {
   const [filter, setFilter] = useState('All');
+  const [expand, setExpand] = useState(false);
   const productFilteredByCategory = props.products.filter((product:Product) => filter === 'All' || product.category === filter);
 
-  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    let newFilter = (event.target.value).toString();
-    setFilter(newFilter);
+  const onChange = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    const button: HTMLButtonElement = event.currentTarget;
+    setFilter(button.name);
+    expandFilter();
+  };
+
+  const expandFilter = () => {
+    setExpand(!expand);
   };
 
 
@@ -20,19 +27,21 @@ const Products:React.FC<{products: Product[]}> = (props) => {
       <div className='card__container'>
         <span className='filter__row'>   
           <div className='filter__container'>
-            <strong>Filter:</strong>
-            <select onChange={onChange}>
-              <option value="All">All</option>
-              <option value="Chair">Chair</option>
-              <option value="Lamp">Lamp</option>
-            </select>
+            <button className='filter__button' onClick={expandFilter}>
+              Sort by: <span>{filter}</span>
+            </button>
+            <div className={`filter__options ${expand ? 'expended' : 'hidden'}`}>
+              <button className='product__button' onClick={onChange} name="All">All</button>
+              <button className='product__button' onClick={onChange} name="Chair">Chair</button>
+              <button className='product__button' onClick={onChange} name="Lamp">Lamp</button>
+            </div>
           </div>    
         </span>
         {productFilteredByCategory
           .map((x, i)=> {
             return(
               <div className='card__item' key={i}>
-                <Link to={{pathname: `/productDetail/${x.id}`}} className='card__text--textDecoration card__text--black'>
+                <Link to={{pathname: `/productDetail/${x.id}`}} className="card__text--textDecoration card__text--black">
                   <ProductCard id={x.id} image={x.image} name={x.name} description={x.description} price={x.price}/>
                 </Link>
               </div>
