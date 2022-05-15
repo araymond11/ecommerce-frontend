@@ -18,6 +18,11 @@ const translationsFr = {
 const translationsEn = {
   firstName: 'First name',
   lastName: 'Last name',
+  address: 'Address',
+  city: 'City',
+  state: 'State',
+  country: 'Country',
+  postalCode: 'Postal Code',
   full: 'Full',
   logout: 'Log out',
   login: 'Login',
@@ -26,7 +31,7 @@ const translationsEn = {
   confirmPassword: 'Confirm password',
   submit: 'Submit',
   registerNow: 'Register now',
-  notAMember: 'Not a member ?'
+  notAMember: 'Not a member ?',
 };
   
 i18n
