@@ -39,9 +39,9 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-              {products.map((x: Product, index:string) =>{
+              {products.map((product: Product, index:string) =>{
                 return(
-                  <ProductDetailTable product={x} index={index} key={index}/>
+                  <ProductDetailTable product={product} index={index} key={index}/>
                 );
               })}
             </tbody>
