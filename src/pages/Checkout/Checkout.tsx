@@ -101,8 +101,11 @@ export const Checkout = () => {
           { products.map( (product: Product) => {
             return(
               <div key={product.id}>
-                <div className='checkout_product'>
-                  <img className="checkout__img" src={product.image} alt="" />
+                <div className='checkout__product'>
+                  <div>
+                    <img className="checkout__img" src={product.image} alt="" />
+                    <span className='product__quantity'>{product.quantity}</span>
+                  </div>
                   <span style={{fontSize: '14px', marginRight: 'auto'}}>{product.name}</span>
                   <p style={{margin: '1rem'}}>{product.price.toLocaleString('en', {style: 'currency',currency: 'CAD'})}</p>
                 </div>

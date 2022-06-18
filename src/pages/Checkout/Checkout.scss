@@ -139,7 +139,7 @@
   margin-top: 2rem;
 }
 
-.checkout_product{
+.checkout__product{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,4 +168,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.product__quantity{
+  font-size: 0.8571428571em;
+  font-weight: 500;
+  line-height: 1.75em;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 1.75em;
+  background-color: rgba(114,114,114,0.9);
+  color: #fff;
+  box-sizing: border-box;
+  min-width: 1.75em;
+  height: 1.75em;
+  padding: 0 0.5833333333em;
+  position: absolute;
+  z-index: 3;
 }
